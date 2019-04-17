@@ -4,12 +4,18 @@
 <script type="text/javascript" src="main.js"></script>
 </head>
 <body style="background-color: black;">
-  <div style="text-align:center; font: 8em Helvetica, Arial, sans-serif; color: white;">&nbsp;</div>
+  <div id="margin-top">&nbsp;</div>
   <div style="text-align:center; font: 8em Helvetica, Arial, sans-serif; color: white;" id="adjective-here">replaced</div>
-  <div style="text-align:center; font: 8em Helvetica, Arial, sans-serif; color: white;">&nbsp;</div>
+  <div style="font-size: 8em;">&nbsp;</div>
   <div style="text-align:center; font: 8em Helvetica, Arial, sans-serif; color: white;" id="vocation-here">foundation</div>
 <script type="text/javascript">
   window.onload = function startEverything() {
+    let params = (new URL(document.location)).searchParams;
+    let marginSize = params.get("margin");
+    for (let i = 0; i < marginSize; i++) {
+      document.getElementById("margin-top").innerHTML 
+          += '<div style="font-size: 8em;" id="inserted-child-' + i + '">&nbsp;</div>';
+    }
     overall();
   }
 </script>
