@@ -1,33 +1,52 @@
 <html>
 <head>
 <title>
-TS test 2
+TS test 3
 </title>
 <script type="text/javascript">  
   
 function Greeter(greeting) {
     this.greeting = greeting;
 }
-
 Greeter.prototype.greet = function() {
     return "Hello, " + this.greeting;
 }
-
 // Oops, we're passing an object when we want a string. This will print 
 // "Hello, [object Object]" instead of "Hello, world" without error.
 let greeter = new Greeter({message: "world"});  
-
 let button = document.createElement('button');
 button.textContent = "Say Hello";
 button.onclick = function() {
     alert(greeter.greet());
 };
+//document.body.appendChild(button);  
 
-document.body.appendChild(button);  
+//----------------
+  
+function slide() {
+    var num = 0, 
+        style1 = document.getElementById('elem1').style, 
+        style2 = document.getElementById('elem2').style;
+    window.setInterval(function () {
+        // increase by num 1, reset to 0 at 4
+        num = (num + 1) % 4;
+        style1.marginLeft = (200 * num) + "px"; 
+        style2.marginLeft = (200 * num) + "px"; 
+    }, 3000); // repeat forever, polling every 3 seconds
+}
   
 </script>
 </head>
 <body>
-<p>This is a TS test 2</p>
+<p>above</p>
+  <div id="elem1">foo</div>
+<p>middle</p>
+  <span id="elem2">bar</span>
+<p>below</p>
+<script type="text/javascript">
+  window.onload = function start() {
+    slide();
+  }
+</script>
 </body>
 </html>
