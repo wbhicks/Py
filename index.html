@@ -1,58 +1,19 @@
 <html>
 <head>
-<title>
-TS test 5
-</title>
+<title>Pairs</title>
 <script type="text/javascript" src="main.js"></script>
-<script type="text/javascript">  
-  
-function Greeter(greeting) {
-    this.greeting = greeting;
-}
-Greeter.prototype.greet = function() {
-    return "Hello, " + this.greeting;
-}
-// Oops, we're passing an object when we want a string. This will print 
-// "Hello, [object Object]" instead of "Hello, world" without error.
-let greeter = new Greeter({message: "world"});  
-let button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function() {
-    alert(greeter.greet());
-};
-//document.body.appendChild(button);  
-
-//----------------
-  
-function slide1and2() {
-    var num = 0, 
-        style1 = document.getElementById('elem-1').style, 
-        style2 = document.getElementById('elem-2').style;
-    window.setInterval(function () {
-        // increase by num 1, reset to 0 at 4
-        num = (num + 1) % 4;
-        style1.marginLeft = (200 * num) + "px"; 
-        style2.marginLeft = (200 * num) + "px"; 
-    }, 3000); // repeat forever, polling every 3 seconds
-}
-  
-</script>
 </head>
 <body>
-<p>a internal:</p>
-  <div id="elem-1">one</div>
-<p>b internal:</p>
-  <span id="elem-2">two</span>
-<p>c external:</p>
-  <div id="elem-3">three</div>
-<p>d external:</p>
-  <span id="elem-4">four</span>
-  <p>Time is <span id="time-here">REPLACE ME</span> o'clock.</p>
+<p>a</p>
+  <div style="text-align:center">
+  <span style="font: 4em Helvetica, Arial, sans-serif;" id="adjective-here">one</span>
+  </div>
+<p>b</p>
+  <div style="text-align:center; font: 8em Helvetica, Arial, sans-serif;" id="vocation-here">two</div>
+<p>c</p>
 <script type="text/javascript">
   window.onload = function startEverything() {
-    slide1and2();
-    slide3and4();
-    setInterval(passMeToSetInterval, 855);
+    overall();
   }
 </script>
 </body>
