@@ -3,6 +3,7 @@
 <title>
 TS test 3
 </title>
+<script type="text/javascript" src="main.js"></script>
 <script type="text/javascript">  
   
 function Greeter(greeting) {
@@ -23,10 +24,10 @@ button.onclick = function() {
 
 //----------------
   
-function slide() {
+function slide1and2() {
     var num = 0, 
-        style1 = document.getElementById('elem1').style, 
-        style2 = document.getElementById('elem2').style;
+        style1 = document.getElementById('elem-1').style, 
+        style2 = document.getElementById('elem-2').style;
     window.setInterval(function () {
         // increase by num 1, reset to 0 at 4
         num = (num + 1) % 4;
@@ -38,14 +39,18 @@ function slide() {
 </script>
 </head>
 <body>
-<p>above</p>
-  <div id="elem1">foo</div>
-<p>middle</p>
-  <span id="elem2">bar</span>
-<p>below</p>
+<p>a</p>
+  <div id="elem-1">one</div>
+<p>b</p>
+  <span id="elem-2">two</span>
+<p>c</p>
+  <div id="elem-3">three</div>
+<p>d</p>
+  <span id="elem-4">four</span>
+<p>e</p>
 <script type="text/javascript">
   window.onload = function start() {
-    slide();
+    slide1and2();
   }
 </script>
 </body>
