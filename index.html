@@ -47,11 +47,12 @@ function slide1and2() {
   <div id="elem-3">three</div>
 <p>d external:</p>
   <span id="elem-4">four</span>
-<hr/>
+  <p>Time is <span id="time-here">REPLACE ME</span> o'clock.</p>
 <script type="text/javascript">
   window.onload = function startEverything() {
-    // slide1and2(); // remember, it never returns
-    slide3and4(); // remember, it never returns
+    slide1and2();
+    slide3and4();
+    setInterval(passMeToSetInterval, 855);
   }
 </script>
 </body>
