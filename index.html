@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>
-TS test 3
+TS test 4 int+ext
 </title>
 <script type="text/javascript" src="main.js"></script>
 <script type="text/javascript">  
@@ -39,18 +39,19 @@ function slide1and2() {
 </script>
 </head>
 <body>
-<p>a</p>
+<p>a internal:</p>
   <div id="elem-1">one</div>
-<p>b</p>
+<p>b internal:</p>
   <span id="elem-2">two</span>
-<p>c</p>
+<p>c external:</p>
   <div id="elem-3">three</div>
-<p>d</p>
+<p>d external:</p>
   <span id="elem-4">four</span>
-<p>e</p>
+<hr/>
 <script type="text/javascript">
-  window.onload = function start() {
+  window.onload = function startEverything() {
     slide1and2();
+    slide3and4();
   }
 </script>
 </body>
