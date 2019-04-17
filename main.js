@@ -9,7 +9,3 @@ function slide3and4() {
         style4.marginLeft = (140 * num) + "px"; 
     }, 2500); // repeat forever, polling every 2.5 seconds
 }
-
-window.onload = function start() {
-  slide3and4();
-}
